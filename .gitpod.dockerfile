@@ -5,3 +5,7 @@ COPY apache.conf /etc/apache2/apache2.conf
 
 # optional: change document root folder. It's relative to your git working copy.
 ENV APACHE_DOCROOT_IN_REPO="www"
+
+FROM php:7.4-apache
+
+RUN a2enmod rewrite
